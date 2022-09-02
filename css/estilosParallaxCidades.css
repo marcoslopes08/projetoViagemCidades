@@ -1,0 +1,242 @@
+/* CSS indexMoonLight_Cidades_Deserto */
+body { /* todo o site seguirá os comando abaixo */
+   margin: 0; /* zera todas as margens */
+   padding: 0; /* zera qualquer espaçamento */
+   color: gainsboro; /* cor da fonte dentro dos Parágrafos */
+   font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif; /* estilo da fonte - 'sans-serif' retira o estilo de letra parecido com Times New Roman */ 
+   word-wrap: break-word; /* garante que o texto inserido não irá aumentar o tamanho do Container */
+   overflow-wrap: break-word; /* garante que o texto inserido não irá aumentar o tamanho do Container */
+   overflow-x: hidden; /* evita que o conteúdo estrapole as margens */
+}
+ 
+.wrapper {
+   width: 100%; /* a largura ocupará de um lado ao outro da Tela */
+   margin: 0 auto; /* 0 = não haverá margens acima/abaixo, auto = a largura das margens direita/esquerda serão iguais */
+}
+ 
+main {
+   display: block; /* serve apenas como efeito de fundo - tanto Fotos quanto Textos ficarão fixas na Tela */ 
+                   /* flex = divide a Tela e coloca Parallax e Textos na mesma linha, um do lado do outro 
+                   inline-block / inline-table = coloca um espaço entre o Parallax e Texto (lado direito da Tela) */
+   background-color: #FFF; /* serve apenas como efeito de fundo - não altera as cores dos comando abaixo ou acima */
+}
+   
+.container {
+   width: 100%; /* largura do Container pegará de uma ponta a outra da Tela */
+   max-width: 720px; /* máxima largura que o Texto atingirá dentro do Container, da margem Esquerda a Direita */
+   margin: 0 auto; /* a margem será zerada e automática na parte Superior/Inferior, também centraliza o Texto */
+   padding: 0 20px; /* 0 = espaçamento será zerado nas margens Superior/Inferior
+                    20px = espaçamento entre o Texto e as laterais Direita/Esquerda */
+}
+ 
+h2 {
+   font-weight: 900; /* causa esfeito NEGRITO na fonte */
+   color: goldenrod; /* cor da fonte */
+   text-shadow: 0 0 1px lightblue; /* efeito sombreado CLARO/ILUMINADO sobre os Títulos */
+}  
+ 
+h3 {
+   font-weight: 500; /* causa esfeito NEGRITO na fonte */
+   color:aquamarine; /* cor da fonte */
+}
+
+.textoSonhe {
+   text-align: center; /* centraliza o Texto dentro do Box criado */
+   color: white; /* cor da Fonte */
+   text-transform: uppercase; /* Caixa Alta */
+   margin-bottom: 40px; /* margem Inferior */
+   font-size: 6.5rem; /* aumenta o tamanho da Fonte */
+   font-weight: 900; /* causa efeito NEGRITO na Fonte */
+   margin-top: -300px; /* margem Superior */
+   color: #0a2a43; /* cor da Fonte */
+   text-shadow: 0 0 6.5px lightblue; /* efeito sombreado CLARO/ILUMINADO */
+}
+
+.textoAnimadoAventure-se { /* Classe que faz o Texto 'AVENTURE-SE' deslizar para baixo da Foto de Deserto */
+   margin-top: -440px; /* margem superior, ajuda o arquivo script.js (JavaScript) a 
+                        fazer o texto entrar por baixo da Foto */
+   text-align: center; /* centraliza o Texto dentro do Box criado */
+   color: #0a2a43; /* era color: rgb(151, 145, 145); /* cor da Fonte */
+   text-transform: uppercase; /* Caixa Alta */
+   font-size: 4.1rem; /* aumenta o tamanho da Fonte */
+   font-weight: 900; /* causa efeito NEGRITO na Fonte */
+   text-shadow: 0 0 6.5px lightblue; /* era text-shadow: 0 0 2px lightblue; /* efeito sombreado */
+}
+
+section.module p { /* Classe Pai */
+   margin-bottom: 30px; /* espaçamento entre os Parágrafos e margem inferior de cada Container Texto */
+}
+
+section.module h2 { /* Container onde são inseridos os Textos */
+   margin-bottom: 10px; /* margem entre o Título h2 o Texto abaixo dele */
+   font-size: 30px; /* tamanho da Fonte no Título h2 */
+   text-transform: uppercase; /* coloca todo Texto em Caixa Alta */
+}
+   
+section.module h3 { /* Container onde são inseridos os Textos */
+   margin-bottom: 10px; /* margem entre o Título h2 o Texto abaixo dele */
+   font-size: 25px; /* tamanho da Fonte no Título h2 */
+   text-transform: capitalize; /* coloca a primeira letra em Caixa Alta */
+}
+   
+section.module h2, h3 {
+   display: inline-block; /* coloca Títulos das tags <h2> e <h3> na mesma linha */
+   padding-right: 5px; /* espaçamento entre os Títulos */
+}
+
+.button {
+   background: lightblue; /* cor de fundo dos Botões */
+   border-radius: 25px; /* arredondamento dos contos dos Botões */
+   padding: 6px; /* espaçamento entre todos os lados dentro do Botão */
+   color: #0a2a43; /* cor de Fonte */
+   font-weight: 700; /* causa esfeito NEGRITO na fonte */ 
+   padding-inline: 23px; /* espaçamento no início e fim dos Botões */
+   text-decoration: none; /* retira o sublinhado que aparece como LINK clicável nos Botões em tags <ul> */
+}
+
+.button:hover {
+   background: goldenrod; /* cor de fundo do Botão quando o mouse for posicionado acima dele */
+   color: purple; /* cor de Fonte */
+}
+
+section.module.content {
+   padding: 5px 0; /* espaçamento do Texto em relação as margens Superior/Inferior, 0(zero) retira qualquer espaço */
+   background: #0a2a43; /* cor de Fundo onde o Texto é digitado */
+}
+   
+section.module.parallax {
+   display: flex; /* flex = centraliza o Texto no centro da Tela/Parallax
+                   block = qualquer coisa que for inserida dentro do Parallax ficará na parte superior */ 
+   flex-direction:column; /* column = qualquer Texto no Parallax será centralizado
+                         row = coloca qualquer Texto na parte Superior da Tela */
+   justify-content: center; /* centraliza o Texto */
+   height: 580px !important; /* altura do Parallax */
+   /* height: 100vh !important; */ /* altura será de 100 View Height, ou seja, se a Tela for minimizada o Parallax fica Responsivo */
+   width: 100%; /* larura do Parallax */
+   position: relative; /* ficará Responsivo, se adapatará ao tamanho da Tela */
+   overflow: hidden; /* Foto ou Texto não ultrapassarão as margens Superior/Inferior/Laterais */
+   background-position: 50% 50%; /* espaçamento idêntico */
+   background-repeat: no-repeat; /* o Parallax não será repetido */
+   background-attachment: fixed; /* fixa a imagem do Paralaxx, pois por padrão todas as imagens vem por Scroll, 
+                                 ou seja, quando descemos pelo site a imagem move-se junto  */
+   background-size: cover; /* espande a imagem do Paralaxx 100% da altura/largura em todas as 
+                            direções para ocupar todos os espaços do Tela */
+   -webkit-background-size: cover; /* garante o funcionamento do Paralaxx no Chrome e Safari */
+   -moz-background-size: cover; /* garante o funcionamento do Paralaxx no Mozilla */
+   -o-background-size: cover; /* garante o funcionamento do Paralaxx no Ópera */
+}
+ 
+section.module.parallax:after {
+   content: ""; /* nenhum texto será escrito, por isso conteúdo vazio apenas para garantir que a sombra terá um COMEÇO e FIM */ 
+   height: 100%; /* o efeito sombreado vai começar a partir do Texto dentro do Parallax até o fim da imagem */
+   width: 100%; /* o efeito sombreado vai pegar a largura de 100% da Tela, da margem Direita até a Esquerda */
+   position: absolute; /* o efeito sombreado terá uma posição fixa dentro da FOTO */
+   z-index: 8; /* faz o efeito sombreado ficar sobre a Foto */
+   background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 10%, #0a2a43 100%); /* efeito sombreado sobre a FOTO 
+               0% = o efeito sombreado começará do Topo da Foto até ficar mais forte no fim dela
+               40% = o efeito sombreado começará a partir do meio da Foto até ficar mais forte no fim dela
+               color: #0a2a43 (cor idêntica ao Fundo dos Containers onde os Textos estão digitados, se substituída por
+               color: #000 (black) causará um efeito NEVOEIRO juntando texto e imagem */
+   background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 10%, #0a2a43 100%); /* efeito sombreado sobre a FOTO no Mozilla*/
+   background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 10%, #0a2a43 100%); /* efeito sombreado sobre a FOTO no Chrome e Safari */
+   background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 10%, #0a2a43 100%); /* efeito sombreado sobre a FOTO no Ópera */
+}
+
+.rio {
+   background-image: url("https://thumbs2.imgbox.com/8d/0e/IDskcCJh_t.jpg");
+}
+
+.toronto {
+   background-image: url("https://thumbs2.imgbox.com/e3/03/OmSdSqKh_t.jpg");
+}
+
+.porto {
+   background-image: url("https://thumbs2.imgbox.com/1f/31/b14zedKF_t.jpg");
+}
+ 
+.madrid {
+   background-image: url("https://thumbs2.imgbox.com/6a/3d/kx1QOz3C_t.jpg");
+}
+
+.london {
+   background-image: url("https://thumbs2.imgbox.com/c8/8c/5w5KCLPC_t.jpg");
+}
+ 
+.amsterdam {
+   background-image: url("https://thumbs2.imgbox.com/0e/0e/ZmutJTSD_t.jpg");
+}
+ 
+.paris {
+   background-image: url("https://thumbs2.imgbox.com/c8/6a/FvIqRRT6_t.jpg");
+}
+
+.veneza {
+   background-image: url("https://thumbs2.imgbox.com/93/ab/P8tapQrP_t.jpg");
+}
+ 
+.colonia {
+   background-image: url("https://thumbs2.imgbox.com/f3/7d/Ylq4FZhq_t.jpg");
+}
+
+.praga {
+   background-image: url("https://thumbs2.imgbox.com/81/6b/YgoEemg7_t.jpg");
+}
+
+.istambul {
+   background-image: url("https://thumbs2.imgbox.com/c1/ab/1HWAqAWP_t.jpg");
+}
+
+.singapura {
+   background-image: url("https://thumbs2.imgbox.com/0f/8a/mFG4Bxvd_t.jpg");
+}
+
+.hong-kong {
+   background-image: url("https://thumbs2.imgbox.com/ad/4c/qhmNXZpn_t.jpg");
+}
+
+.rodapeSite { /* ÍCONES LinkedIn/E-mail/WhatsApp */
+   background: #0a3a44; /* cor de fundo do Rodapé do Site - Section/Container */
+   padding-top: 10px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem superior dele */
+   padding-bottom: 20px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem inferior dele */
+   margin-bottom: -65px; /* retira o espaçamento entre o Rodapé e o fim do site (da Tela) */ 
+   padding-left: 35px; /* espaçamento entre os Ícones e margem Esquerda da Tela */
+}
+
+.rodapeSite2 { /* Desenvolvido por Marcos Lopes */
+   background: #0a3a44; /* cor de fundo do Rodapé do Site - Section/Container */
+   padding-top: 25px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem superior dele */
+   padding-bottom: 8px; /* espaçamento entre o texto dentro do Rodapé do Site e a margem inferior dele */
+   margin-bottom: -65px; /* retira o espaçamento entre o Rodapé e o fim do site (da Tela) */ 
+   text-align: right; /* coloca Texto a direita da Tela*/
+   padding-right: 70px; /* espaçamento entre o Texto e margem Direita da Tela */
+}
+
+.icones {
+   padding: 2px; /* controlar espaçamento entre os ícones do GitHub e Linkedin etc e botões de CONTATO etc */
+   font-size: 25px; /* tamanho dos ÍCONE (LinkedIn/WhatsApp/E-mail) etc */
+   color: white; /* cor dos ÍCONE (LinkedIn/WhatsApp/E-mail) etc */
+}
+
+/* Modo Responsivo */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+   .container { /* Container ficará sempre zerado nas margens e espaçamento, caso seja minimizado */
+      margin: 0;
+      padding: 0;
+   }      
+   section.module h3 { /* Container onde são inseridos os Textos */      
+      font-size: 20px; /* tamanho da Fonte no Título h3 (países) */
+   }      
+   section.module h2, h3 {      
+      padding-right: 1px; /* espaçamento entre os Títulos */
+   }
+   .textoSonhe {      
+      font-size: 4.5rem; /* aumenta o tamanho da Fonte */    
+      margin-top: -200px; /* margem Superior */  
+      margin-left: 10px; /* acrescenta margem Esquerda e ajuda a centralizar o Texto */
+   }
+   .rodapeSite2 { /* Desenvolvido por Marcos Lopes - 2022 */
+      font-size: 12px; /* diminui o tamanho da Fonte */
+      padding-right: 100px; /* espaçamento entre o Texto e margem Direita da Tela
+                               ajuda a centralizar o Texto */
+   }
+}

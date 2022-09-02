@@ -1,0 +1,46 @@
+/* CSS indexMoonLight_Cidades_Deserto */
+.botaoLuminoso {
+    position: relative; /* será responsivo */
+    background: lightblue; /* cor das bordas do Botão */
+    color: goldenrod; /* cor da Fonte dentro do Botão */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+    font-size: 1em; /* tamanho da Fonte */
+    letter-spacing: 0.1em; /* espaçamento entre cada Letra dentro do Botão */
+    padding: 7px 20px;  /* 7px = espaçamento das margens Superior/Inferior
+                          20px = espaçamento entre margem Direita/Esquerda em relação ao Texto */
+    transition: 0.5s; /* tempo de animação quando o mouse for colocado em cima do Botão */
+    border-radius: 20px; /* arredondamento das bordas */
+    font-weight: 600; /* fonte em Negrito */
+}
+
+.botaoLuminoso:hover {
+    letter-spacing: 0.25em; /* espaçamento/animação que expandirá o Botão quando o mouse for posicionado
+                            acima dele (MUITO LEGAL ISSO) */
+    background: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Linha em volta do Botão
+                            e em cima dos QUADRADINHOS ficará com BRILHO */
+    color: var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a COR do Texto dentro do Botão ficará com BRILHO */
+    box-shadow: 0 0 35px var(--clr); /* var(--clr) faz a MÁGICA ACONTECER, a Sombra no Botão ficará com BRILHO */
+    text-decoration: none; /* retira o sublinhado dos botões clicáveis, que vem por padrão */
+}
+
+.botaoLuminoso::before {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    position: absolute; /* Botão terá posição fixa */
+    inset: 1px; /* expessura do LINHA/BRILHO que aparecerá quando o mouse for posicionado em cima do Botão */
+    background: lightblue; /* cor de fundo do Botão */
+    border-radius: 20px; /* arredondamento das bordas do Botão */
+}
+
+.botaoLuminoso::after {
+    content: ""; /* espaço reservado para Texto, fica vazio apenas para funcionar */
+    position: absolute; /* Botão terá posição fixa */
+    inset: 1px; /* expessura do LINHA/BRILHO que aparecerá quando o mouse for posicionado em cima do Botão */
+    background: #0a2a43; /* cor de fundo do Botão */
+    border-radius: 20px; /* arredondamento das bordas do Botão */
+}
+
+.botaoLuminoso span {
+    position: relative; /* será responsivo */
+    z-index: 1;
+}
+

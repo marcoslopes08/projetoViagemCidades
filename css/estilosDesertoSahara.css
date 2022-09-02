@@ -1,0 +1,152 @@
+/* CSS indexMoonLight_Cidades_Deserto */
+body, html { /* a função "Rolagem Suave" não funciona no Microsoft Edge (antigo Internet Explorer) */   
+    scroll-behavior: smooth; /* suaviza a rolagem em todo o site, quando o Menu (Projetos/Certificados/Sobre mim/Contato) for clicado */
+}
+
+.container-deserto1 { /* efeito Sombreado que começa no Parallax Moon Light na parte Superior da Foto */
+    position: relative; /* Foto vai se adpatar ao tamanho da Tela */
+    width: 100%; /* largura do container */
+    height: 100vh; /* altura do container */
+    background: linear-gradient(to bottom, #0a2a43, transparent), url("https://thumbs2.imgbox.com/86/35/D08jLlWe_t.jpg");
+    background-position: center; /* centraliza o Texto dentro do Box */
+    background-size: cover; /* ocupa todos os espaços */
+    padding-left: 5%; /* espaçamento em relação a margem Esquerda para Texto */
+    padding-right: 2%; /* espaço em relação a margem Direita para Texto */
+    box-sizing: border-box; /* coloca todos o Texto como se estivessem num Box */
+}
+
+.container-deserto { /* efeito Sombreado que começa no Parallax Moon Light e se estende até a foto do Deserto */
+    position: relative; /* Foto vai se adpatar ao tamanho da Tela */
+    width: 100%; /* largura do container */
+    height: 100vh; /* altura do container */
+    background: linear-gradient(to bottom, #0a2a43, transparent), url("https://thumbs2.imgbox.com/d7/c9/siBuwl6x_t.png");
+    background-position: center; /* centraliza */
+    background-size: cover; /* ocupa todos os espaços */
+    padding-left: 12%; /* espaçamento em relação a margem Esquerda para Texto/Ícones */
+    padding-right: 5%; /* espaço em relação a margem Direita para as Fotos */
+    box-sizing: border-box; /* coloca todos os elementos Logo/Menu/Texto/Fotos como se estivessem num Box */
+    padding-top: 100px; /* espaçamento entre a margem Superior (Texto/Fotos) e o Parallax acima */
+}
+
+.row { /* linha criada dentro do Container que possibilita a criação de Colunas para Texto/Imagens */
+    display: flex; /* permite que Texto/Imagens sejam manipulados dentro do Container, ficando um do lado do outro */
+    height: 88%; /* altura que a Linha terá dentro do Container, valores abaixo, por exemplo 18%, colocam 
+                Texto/Imagens grudados com o Menu/Logo, valores acima, por exemplo 188%, extrapolam Texto/Imagens pra
+                fora do Container */
+    align-items: center; /* centraliza todos os Elementos Texto/Imagens dentro da Linha criada no Container
+                            baseline = coloca o Texto no topo da Linha criada, na mesma altura das Imagens */
+}
+
+.col{
+    flex-basis: 50%; /* tamanho que a Coluna criada para as Imagens terá
+                        e que faz as Imagens ficarem alinhadas com o último item do Menu (About)
+                        qualquer valor abaixo de 50% coloca as Imagens um em cima da outra, ou desalinha as Imagens */
+}
+
+h1 {
+    color: white; /* cor da Fonte */
+    font-size: 50px; /* tamanho da Fonte */
+}
+
+.primeiroParagrafo {
+    font-size: 1.3em; /* aumenta o tamanho da Fonte apenas no Primeiro Parágrafo do Site */
+}
+
+.navegue {
+    min-width: 180px; /* largura do Botão */
+    font-size: 20px; /* tamanho da Fonte */
+    padding: 8px; /* espaçamento dentro do Botão */
+    background-color: rgb(135, 148, 79) !important; /* cor de fundo do Botão */
+    border: 0; /* 0 = significa que não haverá borda/linha ao redor do Botão 
+                  1 = insere borda/linha ao redor*/ 
+    border-radius: 20px; /* arredondamento das bordas do Botão */
+    margin-top: 30px; /* espaçamento entre o Botão e o Texto acima */
+    cursor: pointer; /* transforma o mouse em Ponteiro (dedo) quando for posicionado sobre o Botão */
+    text-transform: uppercase; /* Caixa Alta */
+    font-weight: 700; /* causa esfeito NEGRITO na fonte */
+}
+
+.navegue:hover {
+    background: lightblue !important; /* cor de fundo do Botão quando o mouse for posicionado acima dele */
+} 
+
+.card {
+    width: 200px; /* largura da Foto */
+    height: 230px; /* altura da Foto */
+    display: inline-block; /* coloca as Fotos um do lado da outra, porém quando a Tela é minimizada esse efeito desaparece */
+    border-radius: 10px; /* arredondamento das bordas das Fotos */
+    padding: 2px 15px; /* 2px = espaçamento do Texto em relação a margem Superior das Fotos (dentro do Card)
+                         15px = espaçamento do Texto/Botão (dentro do Card), em relação a margem Esquerda */
+    box-sizing: border-box; /* faz com que as Fotos fiquem enquadradas, como se estivem dentro de um Box
+                            border-content = ocupa todo o espaço dentro do Container, faz perder esse efeito */
+    margin: 10px 15px; /* 10px = espaçamento entre as Fotos, da margem Superior em relação a Inferior
+                          15px = espaçamento entre as Fotos, da margem Direita em relação a Esquerda */
+    background-position: center; /* centraliza a Foto, exatamente do MEIO para as laterais
+                                 25px = coloca um espaçamento dentro da Foto, como se fosse um linha na margem esquerda (fica até legal)
+                                100px = divide a foto ao meio (também fica legal)  */
+    background-size: cover; /* cover faz com que a Foto ocupe todo o espaço de 200px X 230px (se for minimizada a foto não ficará com espaço vazios)
+                               auto = causa um efeito como se a Foto não coubesse dentro do Espaço de 200px X 230px */
+    transition: transform 0.5s; /* tempo que as Fotos levam para Subir/Descer quando o mouse é posicionado sobre elas */
+    text-transform: uppercase; /* Caixa Alta */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* altura que a Foto irá subir quando o mouse é colocado sobre ela */
+}
+
+.card1 {
+    background-image: url("https://thumbs2.imgbox.com/bd/3c/pTQ2y2BR_t.png");
+}
+
+.card2 {
+    background-image: url("https://thumbs2.imgbox.com/72/92/hVx0gLuW_t.jpg");
+}
+
+.card3 {
+    background-image: url("https://thumbs2.imgbox.com/ec/97/N9a5VKCk_t.jpg");
+}
+
+.card4 {
+    background-image: url("https://thumbs2.imgbox.com/db/02/ZFZH6w8i_t.jpg");
+}
+
+h5 {
+    color: white; /* cor da Fonte dentro dos Cards */
+    text-shadow: 0 0 35px black; /* sombreamento do Título dentro dos Cards */
+    margin-top: 10px; /* margem do Título (dentro do Card) em relação a parte Superior da Foto */ 
+    margin-bottom: 10px; /* margem do Título (dentro do Card) em relação ao Botão abaixo (VEJA +) */
+}
+
+
+/* Os comandos abaixo funcionam quando a Tela for minimizada
+Textos e Títulos ficam responsivos */
+@media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
+    section.module h2 { /* tamanho máximo que os Títulos terão caso a Tela seja minimizada */
+       font-size: 20px; 
+    }
+    .card {
+        width: 150px; /* largura da Foto */
+        height: 120px; /* altura da Foto */
+        font-size: small; /* diminui o tamanho da Fonte no Modo Responsivo */
+    } 
+    .module h2, p { /* tamanho máximo para Textos e Títulos que ficarão com espaçamento iguais,
+                        caso a Tela seja minimizada */
+       padding: 0 28px;
+    }   
+    .container-deserto { /* Container ficará sempre zerado nas margens e espaçamento, caso seja minimizado */
+       margin: 0;
+       padding: 0;
+    }
+    h1 {
+        font-size: 20px; /* diminui o tamanho da Fonte */
+        margin-left: 30px; /* margem esquerda para alinhar o Botão (Explore) ao Texto */
+    }
+    .primeiroParagrafo {
+        font-size: 15px; /* diminui o tamanho da Fonte */
+    }
+    .navegue {
+        min-width: 150px; /* largura do Botão */
+        font-size: 15px; /* tamanho da Fonte */
+        margin-left: 30px; /* margem esquerda para alinhar o Botão (Explore) ao Texto */
+    }
+}

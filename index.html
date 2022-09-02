@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Light Parallax Effects | Vanilla javaScript</title>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    
+    <!-- Abaixo BIBLIOTECA para criar Ícones do GitHub, Linkedin etc pelo Fontawesome --> 
+	<script src="https://kit.fontawesome.com/f0e17cbf2f.js" 
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" 
+        crossorigin="anonymous"></script> -->
+    <!-- Acima BIBLIOTECA para criar Ícones do GitHub, Linkedin etc pelo Fontawesome -->
+
+    <link rel="stylesheet" href="css/estilosParallaxCidades.css">
+    <link rel="stylesheet" href="css/estilosDesertoSahara.css">
+    <link rel="stylesheet" href="css/voltarAoTopo.css">
+	<link rel="stylesheet" href="css/estiloBotaoLuminoso.css">
+
+</head>
+
+<body>
+
+    <section class="module content">
+
+        <div class="container-deserto1">
+            <div class="row">
+                <div class="col">
+                    <p class="textoSonhe">
+                        Sonhe
+                    </p>
+                </div>
+                <div class="container">       
+                    <p class="aventure-se textoAnimadoAventure-se">
+                        Aventure-se
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>  
+    
+    <!-- Section abaixo serve apenas para colocar um LINHA/TARJA entre a Foto de Deserto e Primeiro Parallax(Rio de Janeiro) -->
+    <section class="module content"><br>
+    <!-- Section acima serve apenas para colocar um LINHA/TARJA entre a Foto de Deserto e Primeiro Parallax(Rio de Janeiro) -->
+
+    <div class="container-deserto">
+        <div class="row">
+            <div class="col">
+                <h1>Planeje sua rota</h1>
+                <p class="primeiroParagrafo">Conhecer novas culturas, culinárias típicas, arquitetura e costumes, além de
+                    enriquecer a bagagem sócio-cultural, proporciona experiências que serão 
+                    levadas por toda a vida. Programe-se, crie coragem, escolha
+                    um roteiro (ou vários), siga seus sonhos e aventure-se pelo mundo.
+                    E para isso, seguem algumas dicas que poderão ajudar.
+                </p>
+                <button class="navegue"><a href="#navegue" style="text-decoration: none; color: rgb(73, 73, 66)">explore</a></button>
+            </div>
+            <div class="col">
+                <div class="card card1">
+                    <h5>Paisagens</h5> <a href="https://www.google.com/search?q=as+mais+belas+paisagens+do+mundo&tbm=
+                    isch&ved=2ahUKEwi8-eiUh9P4AhUdN7kGHTo8CykQ2-cCegQIABAA&oq=as+mais+belas+pai&gs_lcp=
+                    CgNpbWcQARgAMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIECAAQHjIECAAQHjIECAAQHjIECAAQGDIECAAQGDoECCMQJzoICAAQsQMQgwE6CAgAEIAEELEDOgsIABCABBCxAxCDAToECAAQQzoKCAAQsQMQgwEQQzoGCAAQHhAIUOgdWOFWYJZnaAhwAHgAgAGkAogB3x6SAQYwLjI0LjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=
+                    img&ei=ZXq8YvyyCp3u5OUPuvisyAI&bih=657&biw=1366&hl=pt-BR" class="button">Veja +</a>
+                </div>
+                <div class="card card2">
+                    <h5>Culinária</h5>
+                    <a href="https://www.google.com/search?q=o+melhor+da+culin%C3%A1ria+pelo+mundo&tbm=isch&ved=
+                    2ahUKEwj66K-Qh9P4AhUyG7kGHZJJAfQQ2-cCegQIABAA&oq=o+melhor+da+culin%C3%A1ria+pelo+mundo&gs_lcp=
+                    CgNpbWcQAzoECCMQJ1CqFliJI2CDJWgAcAB4AIABkwOIAcgPkgEIMC4xMS40LTGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=
+                    img&ei=W3q8YrrPM7K25OUPkpOFoA8&bih=657&biw=1366&hl=pt-BR" class="button">Veja +</a>
+                </div>
+                <div class="card card3">
+                    <h5>Arquitetura</h5>
+                    <a href="https://www.google.com/search?q=arquitetura+pelo+mundo&tbm=isch&ved=
+                    2ahUKEwicsPfZh9P4AhV4HrkGHcBFDF4Q2-cCegQIABAA&oq=arquitemundo&gs_lcp=
+                    CgNpbWcQARgAMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAcyBggAEB4QBzIGCAAQHhAHMgYIABAeEAc6BAgjECc6BggAEB4QCDoECAAQEzoICAAQHhAHEBNQwmVYq3Bgq4MBaABwAHgAgAGUAogBzQqSAQUwLjcuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=
+                    img&ei=9nq8YpzdBvi85OUPwIux8AU&bih=657&biw=1366&hl=pt-BR" class="button">Veja +</a>
+                </div>
+                <div class="card card4">
+                    <h5>Diversão</h5>
+                    <a href="https://www.google.com/search?q=festas+pelo+mundo&tbm=
+                    isch&ved=2ahUKEwi1p_XfiNP4AhX4NrkGHYCpAjoQ2-cCegQIABAA&oq=festas+pelo+mundo&gs_lcp=
+                    CgNpbWcQAzIECAAQGDoECCMQJzoGCAAQHhAHUMgGWOMNYPcXaABwAHgAgAGyAYgBtQiSAQMwLjeYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=
+                    img&ei=D3y8YvXjBfjt5OUPgNOK0AM&bih=657&biw=1366&hl=pt-BR" class="button">Veja +</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section abaixo serve apenas para colocar um LINHA/TARJA entre a Foto de Deserto e Primeiro Parallax(Rio de Janeiro) -->
+    <section class="module content"><br></section>
+    <!-- Section acima serve apenas para colocar um LINHA/TARJA entre a Foto de Deserto e Primeiro Parallax(Rio de Janeiro) -->
+ 
+    <!-- Parallax Cidades -->
+    <div class="wrapper">
+        <main>
+
+        <section class="module parallax rio" id="navegue"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>rio de janeiro │</h2><h3>brasil</h3>
+                <p>
+                    Rio de Janeiro, conhecida mundialmente como “Cidade Maravilhosa” é o maior destino turístico 
+                    internacional no Brasil, na América Latina e em todo o Hemisfério Sul (em 2008), além de 
+                    ser a cidade brasileira mais conhecida no exterior. É a segunda maior metrópole do Brasil 
+                    (depois de São Paulo), a sexta maior da América e a trigésima quinta do mundo.
+                </p>
+                <p>
+                    Sua população estimada pelo IBGE em 2021 era de 6.775.561 habitantes. 
+                    É um dos principais centros econômicos, culturais e financeiros do país, sendo 
+                    internacionalmente conhecida por diversos ícones culturais e paisagísticos, como o 
+                    Pão de Açúcar, o Cristo Redentor, as praias de Copacabana, Ipanema, entre outras.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=rio+de+janeiro&sxsrf=ALiCzsaAud1BYdFfJiST6zk6-YwI_Du1jg:1656459314473&source=
+                lnms&tbm=isch&sa=X&ved=2ahUKEwivnZjop9H4AhU3qJUCHSvkApAQ_AUoA3oECAIQBQ&cshid=
+                1656459391152207&biw=1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+
+        </section>
+
+        <section class="module parallax toronto"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>toronto │</h2><h3>canadá</h3>
+                <p>
+                    Maior cidade e maior centro financeiro do Canadá, além de ser a capital da província 
+                    de Ontário, a cidade é a sede da Bolsa de Valores e dos cinco maiores bancos do país e de 
+                    grandes corporações canadenses e multinacionais. Sua economia é altamente diversificada, com 
+                    pontos fortes em tecnologia, design, serviços financeiros, ciências da vida, educação, artes, 
+                    moda, serviços empresariais, inovação ambiental, serviços de alimentação e turismo.           
+                </p>            
+                <p>
+                    Com uma população estimada em 2.731.571 de habitantes em 2016, é a quarta cidade mais 
+                    populosa da América do Norte. Em 2017, foi considerada pelo Economist a quarta melhor 
+                    cidade do mundo para se viver e uma das cidades mais seguras do Canadá e do continente americano.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=toronto&tbm=isch&ved=2ahUKEwj8ptSNqNH4AhUQs5UCHUh8C8MQ2-cCegQIABAA&oq=
+                toronto&gs_lcp=CgNpbWcQAzIHCAAQsQMQQzIICAAQgAQQsQMyCAgAEIAEELEDMgUIABCABDIFCAAQgAQyBQgAEIAEMgQIABBDMgUIABCABDIFCAAQgAQyBQgAEIAEOgQIIxAnOgsIABCABBCxAxCDAToICAAQsQMQgwFQwg5YlxdglxloAHAAeACAAbYBiAGZCpIBAzAuOJgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=
+                img&ei=gZC7YrziApDm1sQPyPitmAw&bih=657&biw=1366" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Toronto" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+        
+        </section>
+
+        <section class="module parallax porto"></section>
+
+        <section class="module content">
+            <div class="container">               
+                <h2>Porto │</h2><h3>Portugal</h3>
+                <p><br>
+                    Porto é a segunda maior cidade de Portugal depois de Lisboa e uma das principais 
+                    áreas urbanas da Península Ibérica. Tem uma população de 287.591 e a área 
+                    metropolitana do Porto, que se estende para além dos limites administrativos da 
+                    cidade, tem uma população de 2,3 milhões (2011) numa área de 2.395 km2, tornando-se 
+                    a segunda maior área urbana em Portugal.
+                </p>
+                <p>
+                    O vinho do Porto, uma das exportações mais famosas de Portugal, tem o nome do Porto, 
+                    uma vez que a área metropolitana, e em particular os porões de Vila Nova de Gaia, 
+                    foram responsáveis pelo acondicionamento, transporte e exportação do vinho generoso.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=porto+portugal&tbm=isch&hl=
+                pt-BR&chips=q:porto+portugal,g_1:cidade:boB1NOhewl8%3D&sa=X&ved=
+                2ahUKEwj79Zn-qNH4AhXglZUCHUa8Df4Q4lYoAnoECAEQJQ&biw=1349&bih=657" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Porto" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+        
+        </section>
+
+        <section class="module parallax madrid"></section>
+
+        <section class="module content">
+            <div class="container">               
+                <h2>Madri │</h2><h3>espanha</h3><br>
+                <p>
+                    Madrid, localmente é a capital e cidade mais populosa da Espanha. A 
+                    cidade tem quase 3,3 milhões de habitantes e uma população da região 
+                    metropolitana de aproximadamente 6,5 milhões.            
+                </p>
+                <p>
+                    É a terceira maior cidade da União Europeia (UE), superada apenas por Londres 
+                    e Berlim, e sua área metropolitana monocêntrica é a terceira maior da UE, 
+                    menor apenas que as de Londres e Paris. O município abrange 604,3 km2.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=madri+espanha&tbm=isch&ved=2ahUKEwjy9ZWCqdH4AhUDtZUCHangAM0Q2-cCegQIABAA&oq=
+                madri+es&gs_lcp=CgNpbWcQARgAMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIGCAAQHhAFMgYIABAeEAUyBggAEB4QBTIGCAAQHhAFMgYIABAeEAgyBggAEB4QCDoECCMQJzoECAAQQzoLCAAQgAQQsQMQgwE6BwgAELEDEEM6CAgAEIAEELEDOgoIABCxAxCDARBDOgQIABAeUIMdWJBkYIRwaABwAHgAgAHPAYgB1wuSAQUwLjguMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei
+                =dZG7YrLnF4Pq1sQPqcGD6Aw&bih=657&biw=1349&hl=pt-BR" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Madrid" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+
+        <section class="module parallax london"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>Londres │</h2><h3>inglaterra</h3>
+                <p>
+                    Londres é a capital e maior cidade da Inglaterra e do Reino Unido, com a 
+                    maior população municipal da União Europeia. Situada no rio Tâmisa, no sudeste 
+                    da Inglaterra, na cabeceira de seu estuário de 80 km que leva ao Mar do Norte, 
+                    Londres tem sido um importante assentamento por dois milênios.               
+                </p>            
+                <p>
+                    Londres é considerada uma das cidades globais mais importantes do mundo e 
+                    foi considerada a mais poderosa, mais desejável, mais influente, mais visitada, 
+                    mais cara, inovadora, sustentável, mais favorável ao investimento, mais popular 
+                    para o trabalho e a cidade mais vegetariana do mundo.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=londres&sxsrf=ALiCzsajcWEPZhNDAZm6hUtR_NoDcGVTSA:
+                1656458788790&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj8_MLtpdH4AhVjs5UCHUs_ARsQ_AUoA3oECAIQBQ&biw=
+                1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Londres" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+              
+        <section class="module parallax amsterdam"></section>
+
+        <section class="module content">
+            <div class="container">               
+                <h2>Amsterdã │</h2><h3>holanda</h3> 
+                <p> 
+                    Como capital comercial da Holanda e um dos principais centros financeiros 
+                    da Europa, Amsterdã é considerada uma cidade alfa mundial pelo grupo de 
+                    estudos Globalization and World Cities (GaWC). A cidade também é a capital 
+                    cultural da Holanda. Muitas grandes instituições holandesas têm suas sedes 
+                    lá, incluindo Philips, AkzoNobel, TomTom e ING.
+                </p>
+                <p>
+                    Amsterdã se espalha ao sul da estação ferroviária Amsterdam Centraal e Damrak, 
+                    a rua principal fora da estação. A área mais antiga da cidade é conhecida 
+                    como De Wallen (em inglês: "The Quays" – Os Cais). Fica a leste de Damrak 
+                    e contém o famoso distrito da luz vermelha da cidade. Ao sul de De Wallen 
+                    fica o antigo bairro judeu de Waterlooplein.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=amsterd%C3%A3&hl=pt-BR&sxsrf=
+                ALiCzsZ_NaILVeF_phjR-SH9kh5KLFyMrA:1656460002082&source=lnms&tbm=isch&sa=X&ved=
+                2ahUKEwiftYiwqtH4AhUurZUCHa77Be0Q_AUoAXoECAIQAw&biw=1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Amesterd%C3%A3o" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+        
+        <section class="module parallax paris"></section>
+  
+        <section class="module content">
+            <div class="container">
+                <h2>Paris │</h2><h3>frança</h3>
+                <p><br>
+                    Paris é a capital e a cidade mais populosa da França, com uma área de 105 
+                    quilômetros quadrados (41 milhas quadradas) e uma população oficial estimada 
+                    de 2.140.526 habitantes em 1º de janeiro de 2019. Desde o século XVII, Paris 
+                    tem sido um dos principais centros da Europa de finanças, diplomacia, comércio, 
+                    moda, ciência e artes. 
+                </p>
+                <p>
+                    De acordo com a Pesquisa de Custo de Vida Mundial da Economist Intelligence Unit 
+                    em 2018, Paris foi a segunda cidade mais cara do mundo, depois de Singapura, e 
+                    à frente de Zurique, Hong Kong, Oslo e Genebra.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=paris&tbm=isch&ved=2ahUKEwirgOi1qtH4AhXtNrkGHegNBQIQ2-cCegQIABAA&oq=paris&gs_lcp=
+                CgNpbWcQAzIHCAAQsQMQQzILCAAQgAQQsQMQgwEyCAgAEIAEELEDMggIABCABBCxAzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMgUIABCABDILCAAQgAQQsQMQgwEyBQgAEIAEMggIABCABBCxAzoECCMQJzoECAAQQzoICAAQsQMQgwFQ7AdY6gtgpQ1oAHAAeACAAboBiAHqB5IBAzAuNpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=
+                img&ei=7pK7YqvRB-3t5OUP6JuUEA&bih=657&biw=1366&hl=pt-BR" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Paris#:~:text=
+                Desde%20o%20s%C3%A9culo%20XVII%2C%20Paris,18%25%20da%20popula%C3%A7%C3%A3o%20da%20Fran%C3%A7a." 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+
+        <section class="module parallax veneza"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>veneza │</h2><h3>itália</h3>
+                <p><br>
+                    Veneza é uma cidade no nordeste da Itália e a capital da região de Veneto. 
+                    Situa-se num grupo de 118 pequenas ilhas separadas por canais e ligadas por 
+                    mais de 400 pontes.
+                </p>
+                <p>
+                    Veneza é conhecida como "La Dominante", "La Serenissima", "Rainha do Adriático", 
+                    "Cidade da Água", "Cidade das Máscaras", "Cidade das Pontes", "A Cidade Flutuante" 
+                    e "Cidade dos Canais". A lagoa e uma parte da cidade estão listadas como 
+                    Patrimônio Mundial da UNESCO. Partes de Veneza são famosas pela beleza de seus 
+                    cenários, sua arquitetura e obras de arte.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=veneza&hl=pt-BR&sxsrf=ALiCzsYa3-qvDeMYSg1LwzbxquPw2DA4FA:1656460194995&source=
+                lnms&tbm=isch&sa=X&ved=2ahUKEwiQ_YaMq9H4AhUsvJUCHU5oCboQ_AUoAXoECAIQAw&biw=1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Veneza" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>        
+
+        <section class="module parallax colonia"></section>
+
+        <section class="module content">
+            <div class="container">               
+                <h2>colônia │</h2><h3>alemanha</h3>
+                <p>
+                    Colônia é a quarta cidade mais populosa da Alemanha (depois de Berlim, Hamburgo e Munique). 
+                    Está localizada em ambos os lados do rio Reno, perto das fronteiras da Bélgica e Países Baixos. 
+                    A Universidade de Colônia é uma das mais antigas e maiores da Europa. É um importante centro cultural
+                    e hospeda mais de 30 museus e centenas de galerias. 
+                </p>
+                <p>
+                    Foi uma das cidades mais bombardeadas da Alemanha nazista durante a Segunda Guerra Mundial, e com a 
+                    intenção de restaurar tantos edifícios históricos quanto possível, a reconstrução bem sucedida do
+                    pós-guerra resultou em uma paisagem urbana muito mista e única.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=col%C3%B4nia+alemanha&tbm=isch&ved=
+                2ahUKEwi8-oWNq9H4AhXZMrkGHXDmAGEQ2-cCegQIABAA&oq=col%C3%B4nia+alemanha&gs_lcp=
+                CgNpbWcQAzIFCAAQgAQyBggAEB4QBTIECAAQHjIECAAQGDIECAAQGDIECAAQGDoECCMQJzoICAAQgAQQsQM6CwgAEIAEELEDEIMBOgQIABBDOggIABCxAxCDAToHCAAQsQMQQzoECAAQAzoGCAAQHhAIULoFWIo-YLBJaAdwAHgAgAGUAogBwiCSAQYwLjEzLjmYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=
+                img&ei=pZO7YvyTBNnl5OUP8MyDiAY&bih=657&biw=1366&hl=pt-BR" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Col%C3%B4nia_(Alemanha)" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>       
+        
+        <section class="module parallax praga"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>Praga │</h2><h3>república tcheca</h3>
+                <p>
+                    Conhecida como "cidade das cem cúpulas", Praga é um dos mais belos e antigos centros
+                    urbanos da Europa, famosa pelo extenso patrimônio arquitetônico e rica vida cultural.
+                    Importante também como núcleo de transportes e comunicações, é o principal 
+                    centro econômico e industrial do país. Situada às margens do rio Vltava e 
+                    cheia de belas e antigas pontes que contrastam com a presença imponente de grandes 
+                    obras arquitetônicas.              
+                </p>            
+                <p>
+                    Com uma população de 1.237.893 habitantes (censo 2009), estima-se que cerca de 300 mil 
+                    pessoas que ali trabalham não são residentes, morando em cidades de
+                    porte menor vizinhas ou próximas a ela, fazendo dessa forma sua região metropolitana, 
+                    o maior aglomerado urbano do país.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=praga+rep%C3%BAblica+tcheca&hl=pt-BR&sxsrf=
+                ALiCzsaXSHkEeJxUd56T_Qm1rVD8AE1arw:1656460411375&source=lnms&tbm=isch&sa=X&ved=
+                2ahUKEwi_6J3zq9H4AhV1s5UCHfWSDisQ_AUoAXoECAIQAw&biw=1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Praga" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>       
+
+        <section class="module parallax istambul"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>istambul │</h2><h3>turquia</h3>
+                <p>
+                    Constantinopla até 1453, nome bastante difundido no Ocidente até 1930. Durante o período 
+                    otomano, os turcos chamavam-na de Istambul, nome oficialmente adotado em 28 de março de 1930. 
+                    A cidade ocupa ambas as margens do estreito do Bósforo e do norte do mar de Mármara, os quais
+                    a separam da Ásia e da Europa no sentido norte-sul, uma situação que faz de Istambul a única 
+                    cidade que ocupa dois continentes.              
+                </p>            
+                <p>
+                    Algumas zonas históricas da parte europeia de Istambul foram declaradas Património Mundial
+                    pela UNESCO em 1985. Em 2010, a cidade foi a Capital Europeia da Cultura. Devido a sua dimensão e 
+                    importância, Istambul é considerada uma megacidade e uma cidade global.
+                </p>               
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=istambul+turquia&tbm=isch&ved=
+                2ahUKEwjDsvL0q9H4AhVTKrkGHQTTAB0Q2-cCegQIABAA&oq=istambul&gs_lcp=
+                CgNpbWcQARgBMggIABCABBCxAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoECCMQJzoGCAAQHhAHOgYIABAeEAg6BAgAEB46BAgAEBg6BAgAEEM6BwgAELEDEEM6BAgAEANQqg1YnRZg9CZoAHAAeACAAeECiAGVD5IBBzAuNi4xLjKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=
+                img&ei=fpS7YsP7M9PU5OUPhKaD6AE&bih=657&biw=1366&hl=pt-BR" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Istambul" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+
+        <section class="module parallax singapura"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>Singapura │</h2><h3>cidade estado</h3>
+                <p>
+                    Constituída por 63 ilhas, Singapura é separada da Malásia pelo Estreito de Jor.
+                    O país é o que apresenta o maior Índice de Desenvolvimento Humano (IDH) dos 
+                    países asiáticos (9° melhor do mundo em 2014). Seu território é altamente
+                    urbanizado, mas quase metade dele é coberto por vegetação. No entanto, mais 
+                    terras estão sendo criadas para o desenvolvimento por meio do processo de 
+                    aterramento marítimo.               
+                </p>            
+                <p>
+                    Cerca de 5 milhões de pessoas vivem em Singapura, dos quais 2,91 milhões nasceram 
+                    no local. A maioria da população é descendente de chineses, malaios e indianos. Há 
+                    quatro línguas oficiais: inglês, chinês, malaio e tâmil.
+                </p>
+                 
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=singapura&hl=pt-BR&sxsrf=
+                ALiCzsYcDls_NElVQOPwdGaOfH0qApBo5w:1656460929563&source=lnms&tbm=isch&sa=X&ved=
+                2ahUKEwi3tKnqrdH4AhVokZUCHRBIBIAQ_AUoAnoECAIQBA&biw=1366&bih=657&dpr=1" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Singapura" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+    
+        </section>
+
+        <section class="module parallax hong-kong"></section>
+
+        <section class="module content">
+            <div class="container">
+                <h2>Hong Kong │</h2><h3>china</h3>
+                <p>
+                    Hong Kong é uma das duas regiões administrativas especiais (RAE) da República Popular 
+                    da China (RPC), sendo a outra Macau, situada na costa sul da China e delimitada pelo 
+                    delta do Rio das Pérolas e pelo Mar da China Meridional. É conhecida por seu horizonte 
+                    repleto de arranha-céus e por seu profundo porto natural.
+                </p>
+                <p>
+                    Com uma área de 1.104 km2 e uma população de 7 milhões de pessoas, é uma das 
+                    áreas mais densamente povoadas do mundo. A população da cidade é composta por 95% de pessoas 
+                    de etnia chinesa e 5% de outros grupos étnicos. Como um dos principais centros financeiros 
+                    internacionais, Hong Kong tem uma grande economia de serviço capitalista caracterizada pelo 
+                    baixo nível de impostos e pelo livre comércio, e também tem um dos maiores PIB per 
+                    capita do mundo.
+                </p>
+            </div>
+
+            <ul>
+                <a href="https://www.google.com/search?q=hong+kong&tbm=isch&ved=
+                2ahUKEwj387GCrtH4AhVcSLgEHRtxDlAQ2-cCegQIABAA&oq=hong&gs_lcp=
+                CgNpbWcQARgAMgcIABCxAxBDMgoIABCxAxCDARBDMggIABCABBCxAzILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMgQIABBDMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoECCMQJzoICAAQsQMQgwFQ0QxY9RJghyJoAHAAeACAAa8BiAH9BZIBAzAuNZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=
+                img&ei=tJa7YvfJAdyQ4dUPm-K5gAU&bih=657&biw=1366&hl=pt-BR" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>+ fotos</span></a>
+                <a href="https://pt.wikipedia.org/wiki/Hong_Kong" 
+                    class="botaoLuminoso" style="--clr:lightblue"><span>saiba +</span></a>
+            </ul>
+
+        </section>
+
+        </main>
+    </div>
+
+    <div class="module content">
+        <div class="rodapeSite">
+           
+            <a class="icones" href="https://www.linkedin.com/in/marcos-lopes-982616215/">
+                <i title="LinkedIn" class="icones fab fa-linkedin"></i></a>
+
+            <a class="icones" href="https://api.whatsapp.com/send?phone=5511997355410&text=">
+                <i title="WhatsApp (11) 99735-5410" class="icones fab fa-whatsapp"></i></a>
+
+        </div>
+
+        <div class="rodapeSite2">Desenvolvido por Marcos Lopes - 2022</div>
+    </div>
+
+    </section>
+
+    <!-- javaScript para controlar o Texto que entra por baixo da Parallax MONTANHAS/LUA/CARRO-->
+    <script src="java/script.js"></script>
+
+    <!-- Botão voltar ao Topo -->
+    <section>
+        <a href="#" class="btn" title="Voltar ao Topo"></a>
+    </section>
+        
+</body>
+</html>
