@@ -125,7 +125,7 @@ Textos e Títulos ficam responsivos */
        font-size: 20px; 
     }
     .card {
-        width: 150px; /* largura da Foto */
+        width: 130px; /* Era 150px - largura da Foto */
         height: 120px; /* altura da Foto */
         font-size: small; /* diminui o tamanho da Fonte no Modo Responsivo */
     } 
