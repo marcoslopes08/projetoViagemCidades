@@ -33,7 +33,8 @@
 @media all and (max-width: 980px) { /* Tamanho máximo do Container de Textos */
     .btn { /* controle do Botão */
         position: relative; /* mostra o Botão, mas do lado Esquerdo da Tela e ele Fica parado do fim do Site */
-        left: 350px; /* coloca o Botão à Direita da Tela */
-        bottom: -20px; /* margem entre o Botão a parte inferior da Tela */ 
+        /* left: 350px; */ /* coloca o Botão à Direita da Tela */
+        bottom: -25px; /* Era -20px - margem entre o Botão a parte inferior da Tela */ 
+        right: -260px; /* coloca o Botão à Direita da Tela */
     }
 }
