@@ -235,7 +235,7 @@ section.module.parallax:after {
       margin-left: 10px; /* acrescenta margem Esquerda e ajuda a centralizar o Texto */
    }
    .rodapeSite2 { /* Desenvolvido por Marcos Lopes - 2022 */
-      font-size: 10px; /* Era 12px - diminui o tamanho da Fonte */
+      font-size: 9px; /* Era 12px - diminui o tamanho da Fonte */
       padding-right: 100px; /* espaçamento entre o Texto e margem Direita da Tela
                                ajuda a centralizar o Texto */
    }
