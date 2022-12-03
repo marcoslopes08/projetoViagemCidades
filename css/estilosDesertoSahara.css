@@ -126,7 +126,7 @@ Textos e Títulos ficam responsivos */
     }
     .card {
         width: 130px; /* Era 150px - largura da Foto */
-        height: 140px; /* altura da Foto */
+        height: 120px; /* altura da Foto */
         font-size: small; /* diminui o tamanho da Fonte no Modo Responsivo */
     } 
     .module h2, p { /* tamanho máximo para Textos e Títulos que ficarão com espaçamento iguais,
