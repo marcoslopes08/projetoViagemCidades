@@ -242,6 +242,6 @@ section.module.parallax:after {
    .textoAnimadoAventure-se { /* Classe que faz o Texto 'AVENTURE-SE' deslizar para baixo da Foto de Deserto */
       margin-left: -340px; /* Era 360px - margem esquerda, ajuda o arquivo script.js (JavaScript) a 
                            fazer o texto entrar por baixo da Foto no Modo Responsivo */
-      font-size: 2.4rem; /* diminui o tamanho da Fonte */
+      font-size: 2.5rem; /* diminui o tamanho da Fonte */
    }
 }
